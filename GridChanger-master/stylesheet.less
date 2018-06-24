@@ -1,0 +1,200 @@
+* {
+    & > * {
+        padding: 0;
+        margin: 0;
+    }
+}
+body {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+header {
+    position: fixed;
+    font-family: arial;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #3e313c;
+    line-height: 60px;
+    font-size: 24px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.main {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background: rgba(179, 179, 179, 0.25);
+}
+
+.box {
+    overflow: auto;
+    width: 100%;
+}
+
+#maincontent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height: -webkit-min-content;
+    
+    .app {
+        flex: 0 0 180px;
+        height: 130px;
+        margin: 20px;
+        background-size: 180px 100px;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        position: relative;
+        -webkit-box-shadow: 3px 10px 27px -11px #8f8f8f;
+        -moz-box-shadow: 3px 10px 27px -11px #8f8f8f;
+        box-shadow: 3px 10px 27px -11px #8f8f8f;
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+        
+        p {
+            font-size: 15px;
+            font-weight: normal;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            left: 0px;
+            bottom: 5px;
+            font-family: 'arial';
+        }
+        
+    }
+    
+    .app:hover {
+        transform: scale(1.1);
+    }
+    
+}
+.popover {
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    
+    .pop-content-container {
+        flex: 1 1 100%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        
+        .modal {
+            max-width: 670px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            background-clip: padding-box;
+            box-shadow: 0 15px 30px 6px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            width: 75%;
+            color: #595959;
+            background: #fff;
+            padding: 30px;
+            
+            h2 {
+                margin: 20px 0;
+                font-family: 'arial';
+                margin-bottom: 0;
+            }
+            
+            .subheading {
+                margin-bottom: 40px;
+                font-size: 14px;
+                font-family: 'arial'
+            }
+            
+            button {
+                outline: none;
+                background: green;
+                color: #fff;
+                font-size: 16px;
+                width: 180px;
+                height: 40px;
+                border: 0;
+                cursor: pointer;
+                
+                &#save {
+                    float: left;
+                }
+                &#cancel {
+                    float: right;
+                }
+                
+            }
+            
+            .error {
+                font-size: 22px;
+                font-family: 'arial';
+            }
+            
+        }
+        
+    }
+
+}
+
+table {
+    
+    font-size: 16px;
+    font-family: 'arial';
+    margin-bottom: 40px;
+    
+    tbody {
+        .sheet-title {
+            width: 250px; 
+        }
+        .colrow {
+            width: 120px;
+        }
+    }
+    
+    th, td {
+        padding: 10px 10px 5px 0;
+    }
+    
+    .colrow {
+        border: 1px solid #eee;
+        text-align: center;
+    }
+    
+}
+
+.spinner {
+    height: 200px;
+    flex: 0 0 200px;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transform: rotate(360deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
