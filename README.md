@@ -1,4 +1,4 @@
-Screen Resizer for Qlik Sense
+
 
 The **Screen Resizer for Qlik Sense** is an extension which allows you to change the screen height and grid size.
 
@@ -36,3 +36,9 @@ The software is provided "AS IS" without warranty of any kind. This project is l
 Masaki Hamano
 
 The codes of resizing grid is based on [xGridResizer@ludberg]( https://github.com/ludberg/xGridResizer "xGridResizer@ludberg").
+
+-------------------------
+Elton Aguiar--> my thoughts / tips on the extension
+The Screen Resizer for Qlik Sense is an extension which allows you to change the screen height and grid size. Attempted to add screen width %(properties get corrupted so its too buggy). Extension grid size changing is risky so backing up the app is better , we'd need a way to backup all grid sizes of all sheets and restore ideally. Until then screen height changing to 140% or 120% may help a lot of users. I've added a revert height% button with option to hide it, after you click the "buttons" you need to be in EDIT mode for it to take effect. if you click it in analysis mode it will still take effect after you enter edit mode.
+Screen Resizer for Qlik Sense
+-------------------------------
